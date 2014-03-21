@@ -13,7 +13,19 @@ body{
   padding: 0px;
 }
 
-#grid td{
+td{
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin: 2px;
+  position: relative;
+  padding: 0px;
+}
+
+.space{
   background-image: url('/img/bomb.png');
   height: 50px;
   width: 50px;
@@ -24,5 +36,34 @@ body{
   margin: 2px;
   position: relative;
   padding: 0px;
+}
+
+.marker{
+  background-image: url('/img/markerbg.png');
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin: 2px;
+  position: relative;
+  padding: 0px;
+  font-family: 'Monaco', fixed;
+}
+
+.scoredisplay{
+  font-size: 24px;
+  padding-bottom: 10px;
+}
+
+.bombdisplay{
+  font-size: 24px;
+  padding-left: 12px;
+}
+
+#placeholder{
+  background-color: @bg-color;
+  border: 1px solid @bg-color;
 }
 

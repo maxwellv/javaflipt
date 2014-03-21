@@ -14,8 +14,10 @@ module.exports = function(req, res, next){
 
 function load(app, fn){
   var home = require('../routes/home');
+  var play = require('../routes/play');
 
   app.get('/', d, home.index);
+  app.get('/play', d, play.index);
   console.log('Routes Loaded');
   fn();
 }
