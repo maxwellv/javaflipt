@@ -1,4 +1,5 @@
 ##JavaFlipt
+[![Build Status](https://travis-ci.org/maxwellv/javaflipt.svg)](https://travis-ci.org/maxwellv/javaflipt)[![Coverage Status](https://coveralls.io/repos/maxwellv/javaflipt/badge.png)](https://coveralls.io/r/maxwellv/javaflipt)[![Dependency Status](https://gemnasium.com/maxwellv/javaflipt.svg)](https://gemnasium.com/maxwellv/javaflipt)
 ============
 JavaFlipt is a browser-based logic puzzle game. Taking cues from both classic nonogram puzzles and Minesweeper, JavaFlipt has you flipping cards and avoiding bombs on a five-by-five board. Use the indicators for each row and column to deduce the locations of all the bonus cards, then flip them to score the most points and advance to the next level. But watch out! If you find a bomb, you will score nothing for that board and will have to start again.
 
