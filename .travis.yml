@@ -6,4 +6,6 @@ services:
   - redis-server
 after_script:
   - npm run coveralls
-
+env:
+  global:
+    secure: "JznWhJy8qPelcqbjEeUl7rnkW0HfwLYzPoB9SnBiDAROj++Xn73KLIKos49VfiFd/p8yDV8TJlW/K6B5LkogOY488XKiDZhRs72HReKTEatntvY/wXcovp91lQHrVSekbPCyevmWG/Zcub2dWm6NK8zARJ+7iuFxDNaba15vcmo="
