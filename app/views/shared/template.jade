@@ -13,7 +13,7 @@ html(class='no-js', lang='en')
     nav.top-bar
       ul.title-area
         li.name
-          h1: a(href="/") The Title
+          h1: a(href="/") REPLACE THIS WITH LOGO
         li.toggle-topbar.menu-icon
           a(href="#") Menu
 
@@ -21,18 +21,28 @@ html(class='no-js', lang='en')
         ul.left
         ul.right
           li: a(href="/") Home
-          li.divider
-          li: a(href="/") Register
-          li.divider
-          li: a(href="/") Login
+          if user === null
+            li.divider
+            li: a(href="/register") Register
+            li.divider
+            li: a(href="/auth") Login
+          else
+            li.divider
+            li: a(href='/logout') Log out
     .row
       .small-12.columns
         block content
+
+    .row
+      .small-12.columns
+        //bottom nav, copyright content
 
     script(src='/js/vendor/jquery.js')
     script(src='/js/vendor/foundation.min.js')
     script(src='/js/vendor/lodash.js')
     script(src='/js/vendor/moment.js')
-    script(src='/js/source/animation.js') 
+    //script(src='/js/source/animation.js')
+    script(src='/socket.io/socket.io.js')
     script(src='/js/source/main.js')
+    script(src='/js/source/boardgen_test.js')
 

@@ -2,105 +2,121 @@ extends ../shared/template
 
 block content
   h1= title
+  h2 You are currently logged in as #{name}
 
-    .row
-      .small-10.columns
-        #grid
-          table
-            tr#row0
-              td.space#0
-                div.card
-              td.space#1
-                div.card
-              td.space#2
-                div.card
-              td.space#3
-                div.card
-              td.space#4
-                div.card
-              td.marker#row0
-                .scoredisplay#row0display
-                .bombdisplay#row0bombs
-            tr#row1
-              td.space#5
-                div.card
-              td.space#6
-                div.card
-              td.space#7
-                div.card
-              td.space#8
-                div.card
-              td.space#9
-                div.card
-              td.marker#row1
-                .scoredisplay#row1display
-                .bombdisplay#row1bombs
-            tr#row2
-              td.space#10
-                div.card
-              td.space#11
-                div.card
-              td.space#12
-                div.card
-              td.space#13
-                div.card
-              td.space#14
-                div.card
-              td.marker#row2
-                .scoredisplay#row2display
-                .bombdisplay#row2bombs
-            tr#row3
-              td.space#15
-                div.card
-              td.space#16
-                div.card
-              td.space#17
-                div.card
-              td.space#18
-                div.card
-              td.space#19
-                div.card
-              td.marker#row3
-                .scoredisplay#row3display
-                .bombdisplay#row3bombs
-            tr#row4
-              td.space#20
-                div.card
-              td.space#21
-                div.card
-              td.space#22
-                div.card
-              td.space#23
-                div.card
-              td.space#24
-                div.card
-              td.marker#row4
-                .scoredisplay#row4display
-                .bombdisplay#row4bombs
-            tr
-              td.marker#column0
-                .scoredisplay#column0display
-                .bombdisplay#column0bombs
-              td.marker#column1
-                .scoredisplay#column1display
-                .bombdisplay#column1bombs
-              td.marker#column2
-                .scoredisplay#column2display
-                .bombdisplay#column2bombs
-              td.marker#column3
-                .scoredisplay#column3display
-                .bombdisplay#column3bombs
-              td.marker#column4
-                .scoredisplay#column4display
-                .bombdisplay#column4bombs
-              td#placeholder
+  .row
+    .small-5.columns
+      #grid
+        table
+          tr#row0
+            td.space#0
+              div.card
+            td.space#1
+              div.card
+            td.space#2
+              div.card
+            td.space#3
+              div.card
+            td.space#4
+              div.card
+            td.marker#row0
+              .scoredisplay#row0display
+              .bombdisplay#row0bombs
+          tr#row1
+            td.space#5
+              div.card
+            td.space#6
+              div.card
+            td.space#7
+              div.card
+            td.space#8
+              div.card
+            td.space#9
+              div.card
+            td.marker#row1
+              .scoredisplay#row1display
+              .bombdisplay#row1bombs
+          tr#row2
+            td.space#10
+              div.card
+            td.space#11
+              div.card
+            td.space#12
+              div.card
+            td.space#13
+              div.card
+            td.space#14
+              div.card
+            td.marker#row2
+              .scoredisplay#row2display
+              .bombdisplay#row2bombs
+          tr#row3
+            td.space#15
+              div.card
+            td.space#16
+              div.card
+            td.space#17
+              div.card
+            td.space#18
+              div.card
+            td.space#19
+              div.card
+            td.marker#row3
+              .scoredisplay#row3display
+              .bombdisplay#row3bombs
+          tr#row4
+            td.space#20
+              div.card
+            td.space#21
+              div.card
+            td.space#22
+              div.card
+            td.space#23
+              div.card
+            td.space#24
+              div.card
+            td.marker#row4
+              .scoredisplay#row4display
+              .bombdisplay#row4bombs
+          tr
+            td.marker#column0
+              .scoredisplay#column0display
+              .bombdisplay#column0bombs
+            td.marker#column1
+              .scoredisplay#column1display
+              .bombdisplay#column1bombs
+            td.marker#column2
+              .scoredisplay#column2display
+              .bombdisplay#column2bombs
+            td.marker#column3
+              .scoredisplay#column3display
+              .bombdisplay#column3bombs
+            td.marker#column4
+              .scoredisplay#column4display
+              .bombdisplay#column4bombs
+            td#placeholder
+      //button#ping Ping server
+      button#start-new-game Start new game
+      button(style='display: none;')#reveal-all Reveal all cards
+      button(style='display: none;')#quit Quit game
+    .small-2.columns
+      div Current coins:
+        #current-coins 0
+      br
+      div Total coins:
+        #total-coins 0
+      br
+      div Current difficulty:
+        #current-difficulty 0
+    .small-5.columns
+      textarea(disabled, rows='30')#log
 
 
 
-    //button#flipAll Flip all
-    //button#unflipAll Unflip all
-    //button#flipColumn Flip column:
-      input#column-to-flip(type='text', default='0')
-    //button#flipRow Flip row:
-      input#row-to-flip(type='text', default='0')
+  //button#flipAll Flip all
+  //button#unflipAll Unflip all
+  //button#flipColumn Flip column:
+    input#column-to-flip(type='text', default='0')
+  //button#flipRow Flip row:
+    input#row-to-flip(type='text', default='0')
 
