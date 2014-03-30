@@ -66,6 +66,27 @@ describe('users', function(){
         done();
       });
     });
+
+    it('should do the stuff if the player already has a game in progress', function(done){
+      request(app)
+      .post('/startNewGame')
+      .set('cookie', cookie)
+      .end(function(err, res){
+        request(app)
+        .post('/flip/0') //flip any card; this is good enough, I figure
+        .set('cookie', cookie)
+        .end(function(err, res){
+          request(app)
+          .post('/startNewGame')
+          .set('cookie', cookie)
+          .end(function(err, res){
+            expect(res.body.gameState).to.be.ok;
+            expect(res.body.init).to.be.ok;
+            done();
+          });
+        });
+      });
+    });
   });
 
   describe('POST /flip/:card', function(){
@@ -109,6 +130,14 @@ describe('users', function(){
     });
   });
 
-
-
+  describe('GET /scores', function(){
+    it('should get the high scores', function(done){
+      request(app)
+      .get('/scores')
+      .end(function(err, res){
+        expect(res.status).to.equal(200);
+        done();
+      });
+    });
+  });
 });

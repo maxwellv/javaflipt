@@ -32,7 +32,6 @@
   }
 
   function renderSnapshot(data){
-    console.log(data);
     if (data.init){
       unflipAll();
       gameInProgress = true;
@@ -207,7 +206,7 @@
   }
 
   function showStatusText(text){
-    $('#log').append(text + '\n');
+    $('#log').prepend(text + '\n');
   }
 
   function makeURL(){

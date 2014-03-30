@@ -119,3 +119,9 @@ User.prototype.update = function(fn){
     });
   });
 };
+
+User.getHighScores = function(fn){
+  users.find().sort([['coins', -1]]).toArray(function(err, scores){
+    fn(scores);
+  });
+};

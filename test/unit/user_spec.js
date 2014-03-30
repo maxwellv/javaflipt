@@ -159,5 +159,16 @@ describe('User', function(){
       });
     });
   });
+
+  describe('getHighScores', function(){
+    it('should get the high scores', function(done){
+      User.getHighScores(function(scores){
+        expect(scores.length).to.equal(1);
+        expect(scores[0].name).to.equal('Sue');
+        expect(scores[0].coins).to.equal(0);
+        done();
+      });
+    });
+  });
 });
 

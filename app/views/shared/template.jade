@@ -13,20 +13,23 @@ html(class='no-js', lang='en')
     nav.top-bar
       ul.title-area
         li.name
-          h1: a(href="/") REPLACE THIS WITH LOGO
+          a(href="/")
+            img(src="/img/navbarlogo.png")
         li.toggle-topbar.menu-icon
           a(href="#") Menu
 
       section.top-bar-section
         ul.left
         ul.right
-          li: a(href="/") Home
+          li: a(href="/scores") High scores
           if user === null
             li.divider
             li: a(href="/register") Register
             li.divider
             li: a(href="/auth") Login
           else
+            li.divider
+            li: a(href='/play') PLAY NOW
             li.divider
             li: a(href='/logout') Log out
     .row
@@ -41,8 +44,5 @@ html(class='no-js', lang='en')
     script(src='/js/vendor/foundation.min.js')
     script(src='/js/vendor/lodash.js')
     script(src='/js/vendor/moment.js')
-    //script(src='/js/source/animation.js')
-    script(src='/socket.io/socket.io.js')
     script(src='/js/source/main.js')
-    script(src='/js/source/boardgen_test.js')
 

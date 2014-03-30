@@ -1,6 +1,17 @@
 extends ../shared/template
 
 block content
-  h1= title
-  h2 This is the home page. This is placeholder content. 
-    a(href='/play') Click here to go to the page to play this game.
+  img(src='/img/logo.png')
+  br
+  if (user)
+    h2 This is the home page. 
+      a(href='/play') Click here to go to the page to play this game.
+  else
+    h2 This is the home page. If you would like to play JavaFlipt, please 
+      a(href='/register') register now
+      , or 
+      a(href='/login') log in 
+      | if you haven't already.
+  br
+  div You may also view the 
+    a(href='/scores') high scores.

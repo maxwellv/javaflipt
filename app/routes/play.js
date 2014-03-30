@@ -17,6 +17,12 @@ exports.index = function(req, res){
   });
 };
 
+exports.highscores = function(req, res){
+  User.getHighScores(function(scores){
+    res.render('misc/scores', {title: 'High scores', scores: scores});
+  });
+};
+
 exports.startNewGame = function(req, res){
 /*
  * startNewGame is only being called by the client-side JavaScript file. We don't need to do any page rendering here.

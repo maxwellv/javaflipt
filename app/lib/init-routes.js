@@ -23,6 +23,7 @@ function load(app, fn){
   app.post('/flip/:card', d, play.flipCard);
   app.post('/revealAll', d, play.revealAll);
   app.post('/quit', d, play.quit);
+  app.get('/scores', d, play.highscores);
   app.get('/auth', d, users.auth);
   app.get('/register', d, users.register);
   app.post('/auth', d, users.create);

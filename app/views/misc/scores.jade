@@ -1,0 +1,22 @@
+extends ../shared/template
+
+block content
+  h1= title
+  table
+    thead
+      tr
+        th
+        th Player name
+        th Total coins
+    tbody
+      each score in scores
+        if (user !== null && user._id.toString() === score._id.toString())
+          tr
+            th(style="color: red;")= scores.indexOf(score) + 1
+            th(style="color: red;")= score.name
+            th(style="color: red;")= score.coins
+        else
+          tr
+            th= scores.indexOf(score) + 1
+            th= score.name
+            th= score.coins
