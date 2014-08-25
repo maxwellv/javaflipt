@@ -5,4 +5,4 @@ JavaFlipt is a browser-based logic puzzle game. Taking cues from both classic no
 
 JavaFlipt is a remake of [an old minigame](http://bulbapedia.bulbagarden.net/wiki/Voltorb_Flip) present in the international releases of _Pokémon HeartGold and SoulSilver_. Maxwell Vance, the author of JavaFlipt, created the remake as a final project for [Nashville Software School](http://nashvillesoftwareschool.com). JavaFlipt makes heavy use of Node.js, performing all the game logic server-side, then displaying each player's game via client-side jQuery. MongoDB is used to store the registered players and their games in progress.
 
-If you would like to play it, [JavaFlipt is online and playable right now](http://www.javaflipt.com/).
+If you would like to play it, [JavaFlipt is online and playable right now](http://www.javaflipt.com/). You may also log in as example_user@example.com, with the password "example".
