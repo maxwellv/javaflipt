@@ -20,6 +20,7 @@ describe('Game', function(){
   });
 
   beforeEach(function(done){
+    this.timeout(5000);
     global.nss.db.dropDatabase(function(Err, result){
       u1 = new User({name: 'Sue', email:'sue@nomail.com', password:'678utf'});
       u1.register(function(err, body){
